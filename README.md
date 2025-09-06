@@ -16,6 +16,7 @@ Esta aplicación permite a los usuarios crear una lista de amigos y realizar un 
 - **Sorteo aleatorio**: Selecciona un amigo secreto al azar
 - **Resultado destacado**: Muestra el ganador en una interfaz llamativa
 - **Atajo de teclado**: Permite agregar amigos presionando Enter
+- **Limpiar lista**: Botón para resetear y eliminar todos los nombres agregados
 
 ## Tecnologías Utilizadas
 
@@ -38,6 +39,11 @@ Esta aplicación permite a los usuarios crear una lista de amigos y realizar un 
 3. **Nuevo sorteo**:
    - Puedes agregar más amigos en cualquier momento
    - Realizar múltiples sorteos con la misma lista
+
+4. **Limpiar lista**:
+   - Haz clic en "Limpiar Lista" para eliminar todos los nombres
+   - Se pedirá confirmación antes de proceder
+   - La aplicación volverá al estado inicial
 
 ## Instalación y Uso
 
@@ -85,6 +91,7 @@ El proyecto implementa conceptos fundamentales de programación:
 - **Manipulación del DOM**: Actualización dinámica de la interfaz
 - **Eventos**: Interacción con el usuario
 - **Algoritmos de aleatorización**: Para el sorteo justo
+- **Confirmaciones de usuario**: Para acciones destructivas como limpiar la lista
 
 ## Demo en Vivo
 

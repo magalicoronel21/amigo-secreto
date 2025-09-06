@@ -117,6 +117,28 @@ function configurarEventos() {
     inputAmigo.focus();
 }
 
+function limpiarTodo() {
+    // Confirmar la acción con el usuario
+    const confirmacion = confirm('¿Estás seguro de que quieres limpiar toda la lista de amigos?');
+    
+    if (confirmacion) {
+        // Vaciar el array de amigos
+        amigos = [];
+        
+        // Limpiar la lista visual
+        const listaAmigos = document.getElementById('listaAmigos');
+        listaAmigos.innerHTML = '';
+        listaAmigos.style.display = 'block';
+        
+        // Limpiar el resultado
+        const resultado = document.getElementById('resultado');
+        resultado.innerHTML = '';
+        
+        // Enfocar el campo de entrada
+        document.getElementById('amigo').focus();
+    }
+}
+
 /**
  * Inicializar la aplicación cuando se carga el DOM
  */
