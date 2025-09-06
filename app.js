@@ -1,30 +1,25 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-// Array para almacenar los nombres de los amigos
 let amigos = [];
 
-/**
- * Función para agregar un amigo a la lista
- */
 function agregarAmigo() {
-    // Obtener el elemento input y su valor
     const inputAmigo = document.getElementById('amigo');
     const nombreAmigo = inputAmigo.value.trim();
     
-    // Validar que el campo no esté vacío
+    // Validación del campo no vacío
     if (nombreAmigo === '') {
         alert('Por favor, ingrese un nombre válido.');
         inputAmigo.focus();
         return;
     }
     
-    // Validar que el nombre no esté duplicado
+    // ver que el nombre no esté duplicado
     if (amigos.includes(nombreAmigo)) {
-        alert('Este nombre ya está en la lista. Ingrese un nombre diferente.');
+        alert('Este nombre ya está. Ingrese un nombre diferente.');
         inputAmigo.focus();
         return;
     }
     
-    // Agregar el nombre al array
+    // cargar en el array
     amigos.push(nombreAmigo);
     
     // Limpiar el input
@@ -38,13 +33,11 @@ function agregarAmigo() {
     limpiarResultado();
 }
 
-/**
- * Función para mostrar la lista de amigos en el HTML (SIN numeración)
- */
+
 function mostrarAmigos() {
     const listaAmigos = document.getElementById('listaAmigos');
     
-    // Asegurarse de que la lista esté visible
+    
     listaAmigos.style.display = 'block';
     
     // Limpiar la lista actual
@@ -58,9 +51,7 @@ function mostrarAmigos() {
     });
 }
 
-/**
- * Función para sortear un amigo secreto
- */
+
 function sortearAmigo() {
     // Validar que haya al menos 1 amigo en la lista
     if (amigos.length === 0) {
@@ -79,14 +70,12 @@ function sortearAmigo() {
     mostrarResultado(amigoSecretoSeleccionado);
 }
 
-/**
- * Función para mostrar el resultado del sorteo
- */
+
 function mostrarResultado(amigoSecreto) {
     const resultado = document.getElementById('resultado');
     const listaAmigos = document.getElementById('listaAmigos');
     
-    // OCULTAR la lista de amigos completamente
+    // para que no aparezca la lista de amigos al mostrar el resultado  
     listaAmigos.style.display = 'none';
     listaAmigos.innerHTML = '';
     
@@ -99,9 +88,7 @@ function mostrarResultado(amigoSecreto) {
     resultado.appendChild(li);
 }
 
-/**
- * Función para limpiar el resultado anterior
- */
+
 function limpiarResultado() {
     const resultado = document.getElementById('resultado');
     const listaAmigos = document.getElementById('listaAmigos');
@@ -116,9 +103,6 @@ function limpiarResultado() {
     }
 }
 
-/**
- * Función para permitir agregar amigos con la tecla Enter
- */
 function configurarEventos() {
     const inputAmigo = document.getElementById('amigo');
     
